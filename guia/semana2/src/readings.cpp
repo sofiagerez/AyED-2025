@@ -5,7 +5,10 @@
 #include <iomanip>    // std::setprecision
 
 float* crear_arreglo(int size) {
-    //TODO
+    if (size <= 0) {
+        return nullptr;
+    }
+    return new float[size];
 }
 
 void liberar_arreglo(float*& arr) {
