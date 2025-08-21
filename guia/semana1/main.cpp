@@ -88,7 +88,6 @@ int main() {
     //    cout << (void*)(&v[i]) << "\n";
     // 3) Llamar a suma(v,5), promedio(v,5) y (opcional) maximo(v,5) e imprimir.
     //    // TODO: completar implementaciones arriba.
-
     cout << "\nFin Semana 1. Próximo paso: memoria dinámica y archivos (Semana 2).\n";
     return 0;
 }

@@ -12,5 +12,7 @@
 
 ### Para compilar y ejecutar
 ```bash
-g++ -std=c++17 -o semana1 main.cpp && ./semana1
+g++ -std=c++17 -o semana1 main.cpp
+ls
+./semana1
 ```
