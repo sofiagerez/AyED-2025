@@ -12,17 +12,17 @@ int main() {
     s2->setValor(24.0);
     s3->setValor(60);
 
-    Recinto sala("Sala", 5);
-    sala.agregarSensor(s1, 0);
-    sala.agregarSensor(s2, 1);
-    sala.agregarSensor(s3, 2);
+    Recinto* sala= new Recinto("Sala", 5);
+    sala->agregarSensor(s1, 0);
+    sala->agregarSensor(s2, 1);
+    sala->agregarSensor(s3, 2);
 
-    cout << "Promedio temperaturas: " << sala.suma("C")/sala.getCantSensores() << endl;
-    cout << "Posición del máximo en C: " << sala.maximo("C") << endl;
-    int posHumedad = sala.buscar("Humedad");
+    cout << "Suma temperaturas: " << sala->suma("C") << endl;
+    cout << "Posición del máximo en C: " << sala->maximo("C") << endl;
+    int posHumedad = sala->buscar("Humedad");
     cout << "Buscar Humedad -> pos: " << posHumedad << endl;
 
-    Sensor* obtenido = sala.getSensor(posHumedad);
+    Sensor* obtenido = sala->getSensor(posHumedad);
     if(obtenido) cout << "Sensor en pos 1: " << obtenido->getNombre()<<" valor: "<< obtenido->getValor() << obtenido->getUnidad()<< endl;
 
     return 0;

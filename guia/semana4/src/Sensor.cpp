@@ -10,22 +10,22 @@ Sensor::Sensor(std::string nombre, std::string unidad) {
 }
 
 std::string Sensor::getNombre(){
-    return nombre;
+    return this->nombre;
 }
 
 void Sensor::setNombre(std::string nombreNuevo){
-    nombre = nombreNuevo;
+    this->nombre = nombreNuevo;
 }
 
 
 float Sensor::getValor(){
-    return valor;
+    return this->valor;
 }
 
 void Sensor::setValor(float valorNuevo){
-    valor = valorNuevo;
+    this->valor = valorNuevo;
 }
 
 std::string Sensor::getUnidad(){
-    return unidad;
+    return this->unidad;
 }

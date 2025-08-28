@@ -29,7 +29,13 @@ void Recinto::setNombre(std::string nombreNuevo){
 // ------------------ RECURSIVOS ------------------
 
 float Recinto::_suma(Sensor** v, int n, std::string unidad){
-    //TODO
+    if(n==this->nSensores) return 0.0;
+    else {
+        if(v[n]!=nullptr && v[n]->getUnidad()==unidad)
+            return _suma(v, n+1, unidad) + v[n]->getValor();
+        else
+            return _suma(v, n+1, unidad);
+    }
 }
 
 int Recinto::_maximo(Sensor** v, int n, std::string unidad, int mejorPos){

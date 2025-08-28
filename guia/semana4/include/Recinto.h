@@ -28,9 +28,12 @@ class Recinto {
         void setNombre(std::string nombreNuevo);
         int getCantSensores();
         int agregarSensor(Sensor* sensorNuevo, int pos, bool sobreescribir=false){
-            //TODO
+            if (pos < 0 || pos >= this->nSensores) return -1;
+            if (!sobreescribir && this->sensores[pos]!=nullptr) return -2;
+            this->sensores[pos] = sensorNuevo;
+            return 0;
         };
-        float suma(std::string unidad){return _suma(this->sensores,nSensores,unidad);};
+        float suma(std::string unidad){return _suma(this->sensores,0,unidad);};
         Sensor* getSensor(int posBuscada){
             //TODO 
             return nullptr;
@@ -43,12 +46,6 @@ class Recinto {
             //TODO
             return -1;
         };
-
-
-
-        
-        
-
 
 };
 #endif
