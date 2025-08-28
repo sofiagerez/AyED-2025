@@ -35,8 +35,8 @@ class Recinto {
         };
         float suma(std::string unidad){return _suma(this->sensores,0,unidad);};
         Sensor* getSensor(int posBuscada){
-            //TODO 
-            return nullptr;
+
+            return _getSensor(this->sensores, 0, posBuscada);
         };
         int maximo(std::string unidad){
             return _maximo(this->sensores, 0, unidad, -1);

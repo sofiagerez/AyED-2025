@@ -55,5 +55,14 @@ int Recinto::_buscar(Sensor** v, int n, const std::string& nombreBuscado){
 }
 
 Sensor* Recinto::_getSensor(Sensor** v, int n, int posBuscada){
-    //TODO
+    if(n==nSensores){
+        return nullptr;
+    }
+    else{
+        if(n==posBuscada){
+            return v[n];
+        }else{
+            return _getSensor(v, n+1, posBuscada);
+        }
+    }
 }

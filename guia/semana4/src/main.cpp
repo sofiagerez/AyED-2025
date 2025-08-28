@@ -22,7 +22,7 @@ int main() {
     int posHumedad = sala->buscar("Humedad");
     cout << "Buscar Humedad -> pos: " << posHumedad << endl;
 
-    Sensor* obtenido = sala->getSensor(posHumedad);
+    Sensor* obtenido = sala->getSensor(1);
     if(obtenido) cout << "Sensor en pos 1: " << obtenido->getNombre()<<" valor: "<< obtenido->getValor() << obtenido->getUnidad()<< endl;
 
     return 0;
