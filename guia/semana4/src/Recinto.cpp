@@ -42,7 +42,7 @@ int Recinto::_maximo(Sensor** v, int n, std::string unidad, int mejorPos){
     //TODO
 }
 
-int Recinto::_buscar(Sensor** v, int n, const std::string& key){
+int Recinto::_buscar(Sensor** v, int n, const std::string& nombreBuscado){
     //TODO
 }
 

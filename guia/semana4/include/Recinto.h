@@ -17,7 +17,7 @@ class Recinto {
         //sumar n lecturas (floats).
         float _suma(Sensor** v, int n, std::string unidad);
         int _maximo(Sensor** v, int n, std::string unidad, int mejorPos);
-        int _buscar(Sensor** v, int n, const std::string& key);
+        int _buscar(Sensor** v, int n, const std::string& nombreBuscado);
         Sensor* _getSensor(Sensor** v, int n, int posBuscada);
 
     public:
@@ -42,7 +42,7 @@ class Recinto {
             //TODO
             return -1;
         };
-        int buscar(std::string nombre){
+        int buscar(std::string nombreBuscado){
             //TODO
             return -1;
         };
