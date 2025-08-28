@@ -39,7 +39,15 @@ float Recinto::_suma(Sensor** v, int n, std::string unidad){
 }
 
 int Recinto::_maximo(Sensor** v, int n, std::string unidad, int mejorPos){
-    //TODO
+    if(n==this->nSensores) return mejorPos;
+    else{
+        if(v[n]!=nullptr && v[n]->getUnidad()==unidad){
+            if(mejorPos==-1 || v[mejorPos]->getValor()<=v[n]->getValor()){
+                mejorPos = n;
+            }
+        }
+        return _maximo(v, n+1, unidad, mejorPos);
+    }
 }
 
 int Recinto::_buscar(Sensor** v, int n, const std::string& nombreBuscado){

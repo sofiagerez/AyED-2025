@@ -39,8 +39,7 @@ class Recinto {
             return nullptr;
         };
         int maximo(std::string unidad){
-            //TODO
-            return -1;
+            return _maximo(this->sensores, 0, unidad, -1);
         };
         int buscar(std::string nombreBuscado){
             //TODO
