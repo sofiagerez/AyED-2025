@@ -30,7 +30,7 @@ int main() {
 
     // 3) Regla RPN: si temp > 25 && hum < 40 entonces ACT:ventilador=ON
     // tokens (en orden postfijo):
-    //   temp 25 > hum 40 < && ACT:ventilador=ON
+    //   (temp 25 >) (hum 40 <) && ACT:ventilador=ON
     Lista<std::string> regla;
     regla.push_back("temp");
     regla.push_back("25");

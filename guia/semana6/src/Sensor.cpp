@@ -9,11 +9,28 @@ Sensor::~Sensor() {
 }
 
 void Sensor::configurarVentana(int k) {
-    //TODO
+    if(this->ventana) {
+        delete this->ventana;
+        this->ventana = nullptr;
+    }
+    this->ventana = new Cola<float>();
+    if(k>0){
+        this->K=k;
+    }else {
+        this->K=0;
+    }
+    // this->K = (k>0) ? k:0; uso de operador ternario para asignacion
+    // es equivalente al if-else anterior
 }
 
 void Sensor::agregarLectura(float x) {
-    // TODO
+    if(!ventana || K<=0) return;
+    this->ventana->enqueue(x);
+    this->sumaVentana += x;
+    if(this->ventana->size()>K){
+        float val_viejo = ventana->dequeue();
+        this->sumaVentana-=val_viejo;
+    }
 }
 
 void Sensor::setValor(float nuevo) {
