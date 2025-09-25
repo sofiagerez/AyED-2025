@@ -159,7 +159,25 @@ public:
     // asc = true  -> orden ascendente
     // asc = false -> orden descendente
     void bubble_sort(bool asc = true) {
-        // TODO
+        bool swapped;
+        Nodo<T>* end = nullptr;
+        do {
+            // pasada
+            swapped = false;
+            Nodo<T>* p = czo->get_siguiente(); // el nodo actual y empieza desde el principio
+            while(p->get_siguiente()!=end){
+                // me muevo de a pares
+                Nodo<T>* q = p->get_siguiente();
+                if (p->get_dato()>q->get_dato()){
+                    T tmp = p->get_dato();
+                    p->set_dato(q->get_dato());
+                    q->set_dato(tmp);
+                    swapped = true;
+                }
+                p = q;
+            }
+            end = p; // algo que tiene que ver con el puntero del final
+        } while(swapped);
     }
 
     // Bubble Sort re-enlazando nodos adyacentes (sin copiar datos).
@@ -168,6 +186,7 @@ public:
     // Complejidad: O(n^2) tiempo, O(1) espacio. Estable.
     void bubble_sort_links(bool asc = true) {
         // TODO
+    }
 
 };
 

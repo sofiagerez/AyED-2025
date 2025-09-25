@@ -30,9 +30,9 @@ int main() {
 
     // Dos listas idénticas
     Lista<int>* L_datos   = new Lista<int>();
-    Lista<int>* L_enlaces = new Lista<int>();
+    // Lista<int>* L_enlaces = new Lista<int>();
     cargar(L_datos, datos, n);
-    cargar(L_enlaces, datos, n);
+    // cargar(L_enlaces, datos, n);
 
     // Caso 1: Bubble sort swappeando DATOS
     cout << "=== Bubble (swap de datos) ===\n";
@@ -42,15 +42,15 @@ int main() {
 
     cout << "\n";
 
-    // Caso 2: Bubble sort re-enlazando NODOS
-    cout << "=== Bubble (swap de punteros) ===\n";
-    imprimir(L_enlaces, "Antes : ");
-    L_enlaces->bubble_sort_links(true);    // ascendente
-    imprimir(L_enlaces, "Despues: ");
+    // // Caso 2: Bubble sort re-enlazando NODOS
+    // cout << "=== Bubble (swap de punteros) ===\n";
+    // imprimir(L_enlaces, "Antes : ");
+    // L_enlaces->bubble_sort_links(true);    // ascendente
+    // imprimir(L_enlaces, "Despues: ");
 
     // Limpieza
     delete L_datos;
-    delete L_enlaces;
+    // delete L_enlaces;
 
     return 0;
 }
