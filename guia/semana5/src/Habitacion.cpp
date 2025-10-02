@@ -22,6 +22,12 @@ void Habitacion::mostrarRec(std::vector<Sensor>::const_iterator it,
                             std::vector<Sensor>::const_iterator fin,
                             int idxBase) const {
     //TODO: imprimir la cabeza y llamar a la recursión con el resto
+    if(it==fin){
+        return;
+    }else{
+        std::cout << "Sensor[" <<idxBase<<"]"<<it->getNombre()<<std::endl;
+        mostrarRec(std::next(it),fin,idxBase+1);
+    }
 }
 
 int Habitacion::indiceDeRec(std::vector<Sensor>::const_iterator it,
